@@ -34,6 +34,8 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
     "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
 endif()
 
+set(CMAKE_CUDA_COMPILER /usr/local/cuda/bin/nvcc)
+
 ###################################################################################################
 # - compiler options
 
