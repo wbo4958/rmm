@@ -15,6 +15,8 @@
 #=============================================================================
 cmake_minimum_required(VERSION 3.17...3.18 FATAL_ERROR)
 
+set(CMAKE_CUDA_COMPILER /usr/local/cuda/bin/nvcc)
+
 project(RMM VERSION 0.16.0 LANGUAGES C CXX CUDA)
 
 include(cmake/CPM.cmake)
@@ -33,8 +35,6 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
   set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS
     "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
 endif()
-
-set(CMAKE_CUDA_COMPILER /usr/local/cuda/bin/nvcc)
 
 ###################################################################################################
 # - compiler options
